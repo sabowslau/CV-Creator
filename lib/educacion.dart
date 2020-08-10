@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mypersonal3dcv/seccion.dart';
+import 'package:mypersonal3dcv/textlink.dart';
 
 class Educacion extends StatelessWidget {
   const Educacion({Key key}) : super(key: key);
@@ -7,8 +8,11 @@ class Educacion extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SeccionCV(
-      child: Text(
-        """ - Universidad Autonoma de Bucaramanga (Bucaramanga, CO)
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            """ - Universidad Autonoma de Bucaramanga (Bucaramanga, CO)
     2016 - Actualidad
     Ingenieria En Energia
 
@@ -18,10 +22,13 @@ class Educacion extends StatelessWidget {
    Dart
    C#
 """,
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 18,
-        ),
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 18,
+            ),
+          ),
+          TextLink(),
+        ],
       ),
       title: "EDUCACIÓN",
     );
