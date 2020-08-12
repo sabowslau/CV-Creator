@@ -4,8 +4,6 @@ import 'package:mypersonal3dcv/experiencia.dart';
 import 'package:mypersonal3dcv/habilidades.dart';
 import 'package:mypersonal3dcv/idiomas.dart';
 import 'package:mypersonal3dcv/perfil.dart';
-import 'dart:html' as html;
-import 'dart:convert';
 
 void main() {
   runApp(MyApp());

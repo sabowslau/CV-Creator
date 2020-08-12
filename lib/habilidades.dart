@@ -10,20 +10,6 @@ class Habilidades extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> habilidadesWidgets() {
-      List<Widget> temp = List<Widget>();
-
-      for (int i = (habilidades.length / 2) as int;
-          i < habilidades.length;
-          i++) {
-        temp.add(Habilidad(
-          title: habilidades[i][0],
-          imagePath: habilidades[i][1],
-        ));
-      }
-      return temp;
-    }
-
     return SeccionCV(
       title: "HABILIDADES                ",
       child: GridView.builder(

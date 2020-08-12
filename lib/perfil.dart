@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mypersonal3dcv/textlink.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class Perfil extends StatelessWidget {
   const Perfil({Key key}) : super(key: key);
