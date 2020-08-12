@@ -26,7 +26,7 @@ class CV extends StatelessWidget {
       backgroundColor: Colors.black,
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        tooltip: "V1.1 Upcoming Feature",
+        tooltip: "V1.1.1 Upcoming Feature",
         child: Icon(Icons.picture_as_pdf),
         backgroundColor: Colors.grey.shade800,
       ),
