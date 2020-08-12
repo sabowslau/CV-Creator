@@ -39,7 +39,7 @@ class Habilidades extends StatelessWidget {
     return SeccionCV(
       title: "HABILIDADES                ",
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),

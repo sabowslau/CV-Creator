@@ -4,7 +4,6 @@ import 'package:mypersonal3dcv/experiencia.dart';
 import 'package:mypersonal3dcv/habilidades.dart';
 import 'package:mypersonal3dcv/idiomas.dart';
 import 'package:mypersonal3dcv/perfil.dart';
-import 'package:mypersonal3dcv/seccion.dart';
 
 void main() {
   runApp(MyApp());
@@ -28,28 +27,30 @@ class CV extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       body: Center(
-        child: Container(
-          color: Color.fromARGB(255, 52, 55, 57),
-          child: ConstrainedBox(
-            constraints: BoxConstraints(maxWidth: 600),
-            child: Center(
-              child: Column(
-                children: [
-                  Perfil(),
-                  Idioma(),
-                  Habilidades(
-                    habilidades: [
-                      ["Blender", "blendericon.png"],
-                      ["Unity", "unityicon.png"],
-                      ["Photoshop", "psicon.png"],
-                      ["After Effects", "aeicon.png"],
-                      ["Solid Works", "swicon.png"],
-                      ["Premiere Pro", "pricon.png"],
-                    ],
-                  ),
-                  Experiencia(),
-                  Educacion(),
-                ],
+        child: InteractiveViewer(
+          child: Container(
+            color: Color.fromARGB(255, 52, 55, 57),
+            child: ConstrainedBox(
+              constraints: BoxConstraints(maxWidth: 600),
+              child: Center(
+                child: Column(
+                  children: [
+                    Perfil(),
+                    Idioma(),
+                    Habilidades(
+                      habilidades: [
+                        ["After Effects", "aeicon.png"],
+                        ["Premiere Pro", "pricon.png"],
+                        ["Photoshop", "psicon.png"],
+                        ["Blender", "blendericon.png"],
+                        ["Unity", "unityicon.png"],
+                        ["Solid Works", "swicon.png"],
+                      ],
+                    ),
+                    Experiencia(),
+                    Educacion(),
+                  ],
+                ),
               ),
             ),
           ),

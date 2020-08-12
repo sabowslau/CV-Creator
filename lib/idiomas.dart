@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mypersonal3dcv/seccion.dart';
 
 class Idioma extends StatelessWidget {
   const Idioma({Key key}) : super(key: key);
@@ -9,17 +8,25 @@ class Idioma extends StatelessWidget {
     return Row(
       children: [
         Expanded(
-          child: Center(
-            child: Text(
-              "IDIOMAS",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 35,
-                fontWeight: FontWeight.bold,
-                decoration: TextDecoration.underline,
+          child: Column(
+            children: [
+              Center(
+                child: Text(
+                  "IDIOMAS",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 35,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
               ),
-              textAlign: TextAlign.center,
-            ),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 20),
+                color: Colors.white,
+                height: 5,
+              )
+            ],
           ),
         ),
         Expanded(

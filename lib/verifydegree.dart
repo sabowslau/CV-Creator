@@ -1,10 +1,14 @@
-import 'package:flutter/material.dart';
-import 'package:mypersonal3dcv/seccion.dart';
-import 'package:mypersonal3dcv/textlink.dart';
 import 'package:puppeteer/puppeteer.dart' as pup;
+import 'package:flutter/material.dart';
 
-class Educacion extends StatelessWidget {
-  const Educacion({Key key}) : super(key: key);
+class VerifyDegree extends StatefulWidget {
+  VerifyDegree({Key key}) : super(key: key);
+
+  @override
+  _VerifyDegreeState createState() => _VerifyDegreeState();
+}
+
+class _VerifyDegreeState extends State<VerifyDegree> {
   void openWeb() async {
     var browser = await pup.puppeteer.launch();
     var page = await browser.newPage();
@@ -39,41 +43,13 @@ class Educacion extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SeccionCV(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          TextLink(
-            text: """ - Universidad Autonoma de Bucaramanga (Bucaramanga, CO)
-    Ingenieria En Energia
-""",
-            url: "https://www.unab.edu.co/verifica",
-            onTap: () {
-              openWeb();
-            },
-            toolTip: """U00107443 
-20201 
-5abbb38e""",
-          ),
-          TextLink(
-            text: "- Autodidacta",
-            url: "https://github.com/sabowslau",
-          ),
-          TextLink(
-            text: "   Flutter",
-            url: "https://github.com/sabowslau",
-          ),
-          TextLink(
-            text: "   Dart",
-            url: "https://github.com/sabowslau",
-          ),
-          TextLink(
-            text: "   C#",
-            url: "www.sabowsla.com",
-          ),
-        ],
-      ),
-      title: "EDUCACIÓN",
+    return InkWell(
+      child: Text(""),
+      onTap: () {
+        setState(() {
+          openWeb();
+        });
+      },
     );
   }
 }

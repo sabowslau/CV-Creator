@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:mypersonal3dcv/textlink.dart';
 
 class Habilidad extends StatelessWidget {
   final String imagePath;
   final String title;
   final double fontSize;
   final Color fontColor;
+  final String url;
+  final String toolTip;
   const Habilidad(
       {this.imagePath,
       this.title,
+      this.url: "",
       this.fontSize: 25,
+      this.toolTip,
       this.fontColor: Colors.white,
       Key key})
       : super(key: key);
@@ -27,14 +32,7 @@ class Habilidad extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.only(left: 15.0),
-            child: Text(
-              title,
-              style: TextStyle(
-                fontSize: fontSize,
-                color: fontColor,
-                fontWeight: FontWeight.w700,
-              ),
-            ),
+            child: TextLink(text: title, url: url),
           ),
         ],
       ),

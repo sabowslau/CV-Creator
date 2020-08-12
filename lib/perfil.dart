@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:mypersonal3dcv/textlink.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Perfil extends StatelessWidget {
@@ -23,28 +24,25 @@ class Perfil extends StatelessWidget {
                   style: TextStyle(fontSize: 45, color: Colors.white),
                   textAlign: TextAlign.start,
                 ),
-                InkWell(
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(2),
-                        child: Icon(
-                          FontAwesomeIcons.artstation,
-                          color: Colors.white,
-                          size: 18,
-                        ),
+                Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(2),
+                      child: Icon(
+                        FontAwesomeIcons.artstation,
+                        color: Colors.white,
+                        size: 18,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 6),
-                        child: Text("Arstation",
-                            style:
-                                TextStyle(fontSize: 20, color: Colors.white)),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextLink(
+                        text: "Artstation",
+                        url: "https://www.artstation.com/sabowsla",
+                        toolTip: "artstation.com/sabowsla",
                       ),
-                    ],
-                  ),
-                  onTap: () {
-                    launch("https://www.artstation.com/sabowsla");
-                  },
+                    ),
+                  ],
                 )
               ],
             ),
