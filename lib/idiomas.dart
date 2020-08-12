@@ -1,61 +1,64 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 class Idioma extends StatelessWidget {
   const Idioma({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(
-          child: Column(
-            children: [
-              Center(
-                child: Text(
-                  "IDIOMAS",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 35,
-                    fontWeight: FontWeight.bold,
+    return ResponsiveBuilder(
+      builder: (context, sizing) => Row(
+        children: [
+          Expanded(
+            child: Column(
+              children: [
+                Center(
+                  child: Text(
+                    "IDIOMAS",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: sizing.isMobile ? 20 : 35,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
-                  textAlign: TextAlign.center,
                 ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 20),
-                color: Colors.white,
-                height: 5,
-              )
-            ],
+                Container(
+                  margin: EdgeInsets.symmetric(horizontal: 20),
+                  color: Colors.white,
+                  height: 5,
+                )
+              ],
+            ),
           ),
-        ),
-        Expanded(
-          child: Center(
-            child: Text(
-              """Español
+          Expanded(
+            child: Center(
+              child: Text(
+                """Español
 (Nativo)""",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 22,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: sizing.isMobile ? 15 : 22,
+                ),
+                textAlign: TextAlign.center,
               ),
-              textAlign: TextAlign.center,
             ),
           ),
-        ),
-        Expanded(
-          child: Center(
-            child: Text(
-              """Ingles
+          Expanded(
+            child: Center(
+              child: Text(
+                """Ingles
 (Conversacional)""",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 22,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: sizing.isMobile ? 15 : 22,
+                ),
+                textAlign: TextAlign.center,
               ),
-              textAlign: TextAlign.center,
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

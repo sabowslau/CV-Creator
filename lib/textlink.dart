@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 import 'package:url_launcher/url_launcher.dart';
 
@@ -30,41 +31,43 @@ class _TextLinkState extends State<TextLink> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: widget.padding,
-      child: Tooltip(
-        message: widget.toolTip,
-        child: InkWell(
-          onHover: (newState) {
-            setState(() {
-              if (widget.url != "") state = newState;
-            });
-          },
-          child: AnimatedDefaultTextStyle(
-            child: Text(
-              widget.text,
+    return ResponsiveBuilder(
+      builder: (context, sizingInformation) => Padding(
+        padding: widget.padding,
+        child: Tooltip(
+          message: widget.toolTip,
+          child: InkWell(
+            onHover: (newState) {
+              setState(() {
+                if (widget.url != "") state = newState;
+              });
+            },
+            child: AnimatedDefaultTextStyle(
+              child: Text(
+                widget.text,
+              ),
+              duration: const Duration(milliseconds: 200),
+              curve: Curves.ease,
+              style: state
+                  ? TextStyle(
+                      color: Colors.white,
+                      fontSize: sizingInformation.isMobile ? 15 : 18,
+                      decoration: TextDecoration.underline,
+                    )
+                  : TextStyle(
+                      color: Colors.white,
+                      fontSize: sizingInformation.isMobile ? 12 : 15,
+                    ),
+              overflow: TextOverflow.fade,
+              softWrap: true,
             ),
-            duration: const Duration(milliseconds: 200),
-            curve: Curves.ease,
-            style: state
-                ? TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                    decoration: TextDecoration.underline,
-                  )
-                : TextStyle(
-                    color: Colors.white,
-                    fontSize: 15,
-                  ),
-            overflow: TextOverflow.fade,
-            softWrap: true,
+            onTap: () {
+              try {
+                _launchURL();
+                widget.onTap();
+              } catch (e) {}
+            },
           ),
-          onTap: () {
-            try {
-              _launchURL();
-              widget.onTap();
-            } catch (e) {}
-          },
         ),
       ),
     );

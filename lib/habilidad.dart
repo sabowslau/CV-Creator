@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mypersonal3dcv/textlink.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 class Habilidad extends StatelessWidget {
   final String imagePath;
@@ -20,21 +21,23 @@ class Habilidad extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(5),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Container(
-            child: Image.asset(imagePath),
-            width: 50,
-            height: 50,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 15.0),
-            child: TextLink(text: title, url: url),
-          ),
-        ],
+    return ResponsiveBuilder(
+      builder: (context, sizing) => Padding(
+        padding: const EdgeInsets.all(5),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Container(
+              child: Image.asset(imagePath),
+              width: sizing.isMobile ? 30 : 50,
+              height: sizing.isMobile ? 30 : 50,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 15.0),
+              child: TextLink(text: title, url: url),
+            ),
+          ],
+        ),
       ),
     );
   }

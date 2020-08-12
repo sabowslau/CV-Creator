@@ -2,7 +2,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:mypersonal3dcv/seccion.dart';
 import 'package:mypersonal3dcv/textlink.dart';
-import 'package:native_pdf_view/native_pdf_view.dart';
 
 class Educacion extends StatefulWidget {
   const Educacion({Key key}) : super(key: key);
