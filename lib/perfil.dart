@@ -87,10 +87,11 @@ class Perfil extends StatelessWidget {
                               scheme: 'mailto',
                               path: 'jsabaye776@unab.edu.co',
                               queryParameters: {
-                                'subject': 'Proceso de Contratacion',
+                                'subject': 'Proceso⠀de⠀Contratacion',
                                 'body':
-                                    'Hola Jhonatan, Estuvimos viendo tu hoja de vida y nos encantaria tenerte en nuestro equipo de trabajo...'
+                                    'Hola⠀Jhonatan,⠀Estuvimos⠀viendo⠀tu⠀hoja⠀de⠀vida⠀y⠀nos⠀encantaria⠀tenerte⠀en⠀nuestro⠀equipo⠀de⠀trabajo...'
                               });
+
                           launch(_emailLaunchUri.toString());
                         },
                       )
