@@ -62,6 +62,7 @@ class Educacion extends StatelessWidget {
           TextLink(
             text: "   Flutter",
             url: "https://github.com/sabowslau",
+            toolTip: "This web page was made with flutter",
           ),
           TextLink(
             text: "   Dart",
