@@ -28,7 +28,7 @@ class Perfil extends StatelessWidget {
                   Text(
                     "Jhonatan Sabayé",
                     style: TextStyle(
-                      fontSize: sizing.isMobile ? 30 : 45,
+                      fontSize: sizing.isMobile ? 25 : 45,
                       color: Colors.white,
                     ),
                     textAlign: TextAlign.start,

@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 
 class Habilidades extends StatelessWidget {
   final List<List<String>> habilidades;
-
-  Habilidades({Key key, this.habilidades}) : super(key: key);
+  final int filas;
+  Habilidades({Key key, this.habilidades, this.filas: 2}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> habilidadesRestantes() {
+    List<Widget> habilidadesWidgets() {
       List<Widget> temp = List<Widget>();
 
       for (int i = (habilidades.length / 2) as int;
@@ -24,38 +24,24 @@ class Habilidades extends StatelessWidget {
       return temp;
     }
 
-    List<Widget> mitadHablidades() {
-      List<Widget> temp = List<Widget>();
-
-      for (int i = 0; i < habilidades.length / 2; i++) {
-        temp.add(Habilidad(
-          title: habilidades[i][0],
-          imagePath: habilidades[i][1],
-        ));
-      }
-      return temp;
-    }
-
     return SeccionCV(
       title: "HABILIDADES                ",
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: habilidadesRestantes(),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: mitadHablidades(),
-            ),
-          ),
-        ],
+      child: GridView.builder(
+        shrinkWrap: true,
+        physics: NeverScrollableScrollPhysics(),
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: filas,
+          childAspectRatio: MediaQuery.of(context).size.width /
+              (MediaQuery.of(context).size.height / 4),
+        ),
+        itemCount: habilidades.length,
+        itemBuilder: (context, index) {
+          return GridTile(
+              child: Habilidad(
+            title: habilidades[index][0],
+            imagePath: habilidades[index][1],
+          ));
+        },
       ),
     );
   }
