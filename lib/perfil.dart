@@ -81,20 +81,17 @@ class Perfil extends StatelessWidget {
                         icon: Icons.mail,
                         text: "Correo",
                         toolpTip: "jsabaye776@unab.edu.co",
-                        url: "send",
+                        url: "",
                         onTap: () async {
-                          downloadFile("jsabaye776@unab.edu.co");
-                          final Email email = Email(
-                            body: 'Email body',
-                            subject: 'Email subject',
-                            recipients: ['example@example.com'],
-                            cc: ['cc@example.com'],
-                            bcc: ['bcc@example.com'],
-                            attachmentPaths: ['/path/to/attachment.zip'],
-                            isHTML: false,
-                          );
-
-                          await FlutterEmailSender.send(email);
+                          final Uri _emailLaunchUri = Uri(
+                              scheme: 'mailto',
+                              path: 'jsabaye776@unab.edu.co',
+                              queryParameters: {
+                                'subject': 'Proceso de Contratacion',
+                                'body':
+                                    'Hola Jhonatan, Estuvimos viendo tu hoja de vida y nos encantaria tenerte en nuestro equipo de trabajo...'
+                              });
+                          launch(_emailLaunchUri.toString());
                         },
                       )
                     ],
@@ -155,8 +152,8 @@ class IconTextLink extends StatelessWidget {
   }
 }
 
-void downloadFile(String url) {
-  html.AnchorElement anchorElement = new html.AnchorElement(href: url);
-  anchorElement.download = url;
+void downloadFile(String file) {
+  html.AnchorElement anchorElement = new html.AnchorElement(href: file);
+  anchorElement.download = file;
   anchorElement.click();
 }
