@@ -34,7 +34,7 @@ class SeccionCV extends StatelessWidget {
             Container(
               margin: EdgeInsets.only(bottom: 15),
               color: Colors.white,
-              height: 5,
+              height: sizingInformation.isMobile ? 2 : 5,
             ),
             if (child != null) child,
           ],

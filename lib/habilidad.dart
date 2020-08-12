@@ -29,11 +29,11 @@ class Habilidad extends StatelessWidget {
           children: [
             Container(
               child: Image.asset(imagePath),
-              width: sizing.isMobile ? 30 : 50,
-              height: sizing.isMobile ? 30 : 50,
+              width: sizing.isMobile ? 25 : 50,
+              height: sizing.isMobile ? 25 : 50,
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 15.0),
+              padding: EdgeInsets.only(left: sizing.isMobile ? 7 : 15),
               child: TextLink(text: title, url: url),
             ),
           ],

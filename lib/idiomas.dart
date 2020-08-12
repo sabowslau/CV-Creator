@@ -26,7 +26,7 @@ class Idioma extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.symmetric(horizontal: 20),
                   color: Colors.white,
-                  height: 5,
+                  height: sizing.isMobile ? 2 : 5,
                 )
               ],
             ),

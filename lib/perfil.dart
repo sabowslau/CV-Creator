@@ -14,20 +14,21 @@ class Perfil extends StatelessWidget {
         child: Row(
           children: [
             Container(
-              width: sizing.isMobile ? 100 : 120,
-              height: sizing.isMobile ? 100 : 120,
+              width: sizing.isMobile ? 80 : 120,
+              height: sizing.isMobile ? 80 : 120,
               child: Image.asset("foto.png"),
             ),
             Expanded(
                 child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 40),
+              padding:
+                  EdgeInsets.symmetric(horizontal: sizing.isMobile ? 20 : 40),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     "Jhonatan Sabayé",
                     style: TextStyle(
-                      fontSize: sizing.isMobile ? 25 : 45,
+                      fontSize: sizing.isMobile ? 20 : 45,
                       color: Colors.white,
                     ),
                     textAlign: TextAlign.start,
@@ -43,7 +44,7 @@ class Perfil extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(2),
                         child: TextLink(
                           text: "Artstation",
                           url: "https://www.artstation.com/sabowsla",
@@ -59,7 +60,7 @@ class Perfil extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(2),
                         child: TextLink(
                           text: "Github",
                           url: "https://github.com/sabowslau",
