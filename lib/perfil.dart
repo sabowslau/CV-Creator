@@ -50,6 +50,14 @@ class Perfil extends StatelessWidget {
                           toolTip: "artstation.com/sabowsla",
                         ),
                       ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextLink(
+                          text: "Github",
+                          url: "https://github.com/sabowslau",
+                          toolTip: "github.com/sabowslau",
+                        ),
+                      ),
                     ],
                   )
                 ],

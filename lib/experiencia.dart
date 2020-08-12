@@ -25,6 +25,11 @@ class Experiencia extends StatelessWidget {
    2018 - 2020
   Edicion de videos y creacion de efectos.""",
           ),
+          TextLink(
+            text: """- Proyecto Personal
+  Aplicacion para calculo de analisis de sistemas de transferencia de calor""",
+            url: "",
+          ),
         ],
       ),
       title: "EXPERIENCIA",
