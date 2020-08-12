@@ -31,33 +31,60 @@ class Idioma extends StatelessWidget {
               ],
             ),
           ),
-          Expanded(
-            child: Center(
-              child: Text(
-                """Español
-(Nativo)""",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: sizing.isMobile ? 15 : 22,
-                ),
-                textAlign: TextAlign.center,
-              ),
-            ),
+          IdiomaViewType(
+            idioma: "Español",
+            nivel: "Nativo",
+            sizing: sizing,
           ),
-          Expanded(
-            child: Center(
-              child: Text(
-                """Ingles
-(Conversacional)""",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: sizing.isMobile ? 15 : 22,
-                ),
-                textAlign: TextAlign.center,
-              ),
-            ),
+          IdiomaViewType(
+            idioma: "Ingles",
+            nivel: "Conversacional",
+            sizing: sizing,
           ),
         ],
+      ),
+    );
+  }
+}
+
+class IdiomaViewType extends StatelessWidget {
+  final SizingInformation sizing;
+  final String idioma;
+  final String nivel;
+
+  const IdiomaViewType(
+      {@required this.sizing, this.idioma, this.nivel, Key key})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Center(
+        child: RichText(
+          text: TextSpan(
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: sizing.isMobile ? 12 : 18,
+            ),
+            children: [
+              TextSpan(
+                text: "$idioma \n",
+                style: TextStyle(
+                  height: 0,
+                  textBaseline: TextBaseline.ideographic,
+                ),
+              ),
+              TextSpan(
+                text: "($nivel)",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: sizing.isMobile ? 10 : 12,
+                ),
+              ),
+            ],
+          ),
+          textAlign: TextAlign.center,
+        ),
       ),
     );
   }
