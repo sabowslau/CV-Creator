@@ -15,14 +15,15 @@ class Experiencia extends StatelessWidget {
             text: """- Sabowsla Games (Bucaramanga, CO)
    2019 - 2020 
    Trabajé como dieñador generalista para la creacion de 
-   personajes y diseño ambiental""",
+   personajes y diseño ambiental.""",
             url: "https://sabowsla-c656a.firebaseapp.com/#/games",
             toolTip: "sabowsla.com/games",
+            padding: EdgeInsets.only(bottom: 10),
           ),
           TextLink(
             text: """- Contractor Independiente (Bucaramanga, CO)
    2018 - 2020
-  Edicion de videos y creacion de efectos""",
+  Edicion de videos y creacion de efectos.""",
           ),
         ],
       ),

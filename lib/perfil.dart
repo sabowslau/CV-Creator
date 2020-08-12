@@ -12,7 +12,11 @@ class Perfil extends StatelessWidget {
       padding: EdgeInsets.all(20),
       child: Row(
         children: [
-          Container(width: 120, height: 120, child: Image.asset("foto.png")),
+          Container(
+            width: 120,
+            height: 120,
+            child: Image.asset("foto.png"),
+          ),
           Expanded(
               child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 40),
