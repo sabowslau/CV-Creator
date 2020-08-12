@@ -34,7 +34,11 @@ class Habilidad extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(left: sizing.isMobile ? 7 : 15),
-              child: TextLink(text: title, url: url),
+              child: TextLink(
+                text: title,
+                url: url,
+                toolTip: toolTip,
+              ),
             ),
           ],
         ),

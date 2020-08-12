@@ -12,19 +12,15 @@ class Experiencia extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           TextLink(
-            text: """- Sabowsla Games (Bucaramanga, CO)
-   2019 - 2020 
-   Trabajé como dieñador generalista para la creacion de 
-   personajes y diseño ambiental.""",
-            url: "https://sabowsla-c656a.firebaseapp.com/#/games",
-            toolTip: "sabowsla.com/games",
+            text: """- Sabowsla Games (Bucaramanga, CO)""",
+            url: "www.sabowsla.com",
+            toolTip:
+                "Trabajé como diseñador generalista y programador para la creacion de juegos 3D",
             padding: EdgeInsets.only(bottom: 5),
           ),
           TextLink(
             padding: EdgeInsets.only(bottom: 5),
-            text: """- Contractor Independiente (Bucaramanga, CO)
-   2018 - 2020
-  Edicion de videos y creacion de efectos.""",
+            text: "- Contractor Independiente (Bucaramanga, CO)",
             toolTip:
                 "Trabaje como editor de videos para Youtubers y Cantantes.",
           ),

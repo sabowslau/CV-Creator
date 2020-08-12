@@ -25,6 +25,7 @@ class Habilidades extends StatelessWidget {
               child: Habilidad(
             title: habilidades[index][0],
             imagePath: habilidades[index][1],
+            toolTip: habilidades[index][2],
           ));
         },
       ),

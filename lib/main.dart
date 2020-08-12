@@ -26,7 +26,7 @@ class CV extends StatelessWidget {
       backgroundColor: Colors.black,
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        tooltip: "Upcoming Feature",
+        tooltip: "V1.1 Upcoming Feature",
         child: Icon(Icons.picture_as_pdf),
         backgroundColor: Colors.grey.shade800,
       ),
@@ -44,15 +44,27 @@ class CV extends StatelessWidget {
                     Habilidades(
                       filas: 3,
                       habilidades: [
-                        ["After Effects", "aeicon.png"],
-                        ["Premiere Pro", "pricon.png"],
-                        ["Photoshop", "psicon.png"],
-                        ["Blender", "blendericon.png"],
-                        ["Unity", "unityicon.png"],
-                        ["Solid Works", "swicon.png"],
-                        ["Dart", "darticon.png"],
-                        ["C#", "csharp.png"],
-                        ["Git", "git.png"],
+                        ["After Effects", "aeicon.png", ""],
+                        ["Premiere Pro", "pricon.png", ""],
+                        ["Photoshop", "psicon.png", ""],
+                        ["Blender", "blendericon.png", ""],
+                        [
+                          "Unity",
+                          "unityicon.png",
+                          "Experiencia con unity para la "
+                        ],
+                        [
+                          "Solid Works",
+                          "swicon.png",
+                          "Proficiente En Diseño Parametrico"
+                        ],
+                        ["Dart", "darticon.png", "Proficiente en Dart"],
+                        ["C#", "csharp.png", "Proficiente en C#"],
+                        [
+                          "Git",
+                          "git.png",
+                          "Conocimientos en control de la version"
+                        ],
                       ],
                     ),
                     Experiencia(),
