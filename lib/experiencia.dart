@@ -18,25 +18,28 @@ class Experiencia extends StatelessWidget {
    personajes y diseño ambiental.""",
             url: "https://sabowsla-c656a.firebaseapp.com/#/games",
             toolTip: "sabowsla.com/games",
-            padding: EdgeInsets.only(bottom: 10),
+            padding: EdgeInsets.only(bottom: 5),
           ),
           TextLink(
-            padding: EdgeInsets.only(bottom: 10),
+            padding: EdgeInsets.only(bottom: 5),
             text: """- Contractor Independiente (Bucaramanga, CO)
    2018 - 2020
   Edicion de videos y creacion de efectos.""",
+            toolTip:
+                "Trabaje como editor de videos para Youtubers y Cantantes.",
           ),
           TextLink(
-            padding: EdgeInsets.only(bottom: 10),
+            padding: EdgeInsets.only(bottom: 5),
             text: "- Proyecto Personal",
             url: "https://sabowslau.github.io/Analisis-Pinch/#/",
             toolTip:
                 "Aplicacion para calculo de analisis de sistemas de transferencia de calor",
           ),
           TextLink(
-            padding: EdgeInsets.only(bottom: 10),
+            padding: EdgeInsets.only(bottom: 5),
             text: """- Proyecto Personal""",
-            url: "Diseño de figuras geometricas",
+            url: "https://sabowslau.github.io/Sashimetri/#/",
+            toolTip: "Aplicacion para la creacion de figuras geometricas",
           ),
         ],
       ),
