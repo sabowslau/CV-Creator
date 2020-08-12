@@ -42,24 +42,18 @@ class _TextLinkState extends State<TextLink> {
                 if (widget.url != "") state = newState;
               });
             },
-            child: AnimatedDefaultTextStyle(
-              child: Text(
-                widget.text,
-              ),
-              duration: const Duration(milliseconds: 200),
-              curve: Curves.ease,
+            child: Text(
+              widget.text,
               style: state
                   ? TextStyle(
                       color: Colors.white,
-                      fontSize: sizingInformation.isMobile ? 15 : 18,
+                      fontSize: sizingInformation.isMobile ? 12 : 15,
                       decoration: TextDecoration.underline,
                     )
                   : TextStyle(
                       color: Colors.white,
                       fontSize: sizingInformation.isMobile ? 12 : 15,
                     ),
-              overflow: TextOverflow.fade,
-              softWrap: true,
             ),
             onTap: () {
               try {

@@ -17,8 +17,7 @@ class Habilidades extends StatelessWidget {
         physics: NeverScrollableScrollPhysics(),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: filas,
-          childAspectRatio: MediaQuery.of(context).size.width /
-              (MediaQuery.of(context).size.height / 4),
+          childAspectRatio: 2.5,
         ),
         itemCount: habilidades.length,
         itemBuilder: (context, index) {

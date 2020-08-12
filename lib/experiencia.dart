@@ -21,14 +21,22 @@ class Experiencia extends StatelessWidget {
             padding: EdgeInsets.only(bottom: 10),
           ),
           TextLink(
+            padding: EdgeInsets.only(bottom: 10),
             text: """- Contractor Independiente (Bucaramanga, CO)
    2018 - 2020
   Edicion de videos y creacion de efectos.""",
           ),
           TextLink(
-            text: """- Proyecto Personal
-  Aplicacion para calculo de analisis de sistemas de transferencia de calor""",
-            url: "",
+            padding: EdgeInsets.only(bottom: 10),
+            text: "- Proyecto Personal",
+            url: "https://sabowslau.github.io/Analisis-Pinch/#/",
+            toolTip:
+                "Aplicacion para calculo de analisis de sistemas de transferencia de calor",
+          ),
+          TextLink(
+            padding: EdgeInsets.only(bottom: 10),
+            text: """- Proyecto Personal""",
+            url: "Diseño de figuras geometricas",
           ),
         ],
       ),

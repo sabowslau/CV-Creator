@@ -51,6 +51,14 @@ class Perfil extends StatelessWidget {
                         ),
                       ),
                       Padding(
+                        padding: const EdgeInsets.all(2),
+                        child: Icon(
+                          FontAwesomeIcons.github,
+                          color: Colors.white,
+                          size: 18,
+                        ),
+                      ),
+                      Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: TextLink(
                           text: "Github",

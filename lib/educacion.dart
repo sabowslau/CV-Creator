@@ -24,23 +24,6 @@ class _EducacionState extends State<Educacion> {
             onTap: () {},
             padding: EdgeInsets.only(bottom: 10),
           ),
-          TextLink(
-            text: "- Autodidacta",
-            url: "https://github.com/sabowslau",
-          ),
-          TextLink(
-            text: "   Flutter",
-            url: "https://github.com/sabowslau",
-            toolTip: "This web page was made with flutter",
-          ),
-          TextLink(
-            text: "   Dart",
-            url: "https://github.com/sabowslau",
-          ),
-          TextLink(
-            text: "   C#",
-            url: "www.sabowsla.com",
-          ),
         ],
       ),
       title: "EDUCACIÓN",

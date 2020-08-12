@@ -52,6 +52,7 @@ class CV extends StatelessWidget {
                         ["Solid Works", "swicon.png"],
                         ["Dart", "darticon.png"],
                         ["C#", "csharp.png"],
+                        ["Git", "git.png"],
                       ],
                     ),
                     Experiencia(),
