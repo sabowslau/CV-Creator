@@ -41951,7 +41951,7 @@ return P.r(q.ay(0),$async$dC)
 case 10:return P.B(null,r)}})
 return P.C($async$dC,r)},
 N:function(a){var s="https://github.com/sabowslau",r=null
-return Q.a0n(T.jH(H.a([U.j6(new U.K4(this)," - Universidad Autonoma de Bucaramanga (Bucaramanga, CO)\n    Ingenieria En Energia\n","U00107443 \n20201 \n5abbb38e","https://www.unab.edu.co/verifica"),U.j6(r,"- Autodidacta","",s),U.j6(r,"   Flutter","",s),U.j6(r,"   Dart","",s),U.j6(r,"   C#","","www.sabowsla.com")],t.t),C.b_,C.al),"EDUCACI\xd3N")}}
+return Q.a0n(T.jH(H.a([U.j6(new U.K4(this)," - Universidad Autonoma de Bucaramanga (Bucaramanga, CO)\n    Ingenieria En Energia\n","U00107443 \n20201 \n5abbb38e","https://www.unab.edu.co/verifica"),U.j6(r,"- Autodidacta","",s),U.j6(r,"   Flutter","This web page was made with flutter",s),U.j6(r,"   Dart","",s),U.j6(r,"   C#","","www.sabowsla.com")],t.t),C.b_,C.al),"EDUCACI\xd3N")}}
 U.K4.prototype={
 $0:function(){this.a.dC()},
 $S:0}
