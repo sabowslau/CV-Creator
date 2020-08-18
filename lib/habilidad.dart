@@ -28,7 +28,7 @@ class Habilidad extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Container(
-              child: Image.asset(imagePath),
+              child: Image.network(imagePath),
               width: sizing.isMobile ? 25 : 50,
               height: sizing.isMobile ? 25 : 50,
             ),

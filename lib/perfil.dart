@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:mypersonal3dcv/text_link_model.dart';
 import 'package:mypersonal3dcv/textlink.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'dart:html' as html;
-import 'package:flutter_email_sender/flutter_email_sender.dart';
 
 class Perfil extends StatelessWidget {
-  const Perfil({Key key}) : super(key: key);
+  final String aboutMe;
+  final List<TextLinkModel> topLinks;
+  const Perfil({Key key, this.aboutMe, @required this.topLinks})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,90 +17,61 @@ class Perfil extends StatelessWidget {
         padding: EdgeInsets.all(
           sizing.isMobile ? 10 : 20,
         ),
-        child: Row(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Container(
-              width: sizing.isMobile ? 80 : 120,
-              height: sizing.isMobile ? 80 : 120,
-              child: Image.asset("foto.png"),
-            ),
-            Expanded(
-                child: Padding(
-              padding:
-                  EdgeInsets.symmetric(horizontal: sizing.isMobile ? 20 : 40),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Jhonatan Sabayé",
-                    style: TextStyle(
-                      fontSize: sizing.isMobile ? 20 : 45,
-                      color: Colors.white,
-                    ),
-                    textAlign: TextAlign.start,
-                  ),
-                  Row(
+            Row(
+              children: [
+                Container(
+                  width: sizing.isMobile ? 80 : 120,
+                  height: sizing.isMobile ? 80 : 120,
+                  child: Image.asset("foto.png"),
+                ),
+                Expanded(
+                    child: Padding(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: sizing.isMobile ? 20 : 40),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.all(2),
-                        child: Icon(
-                          FontAwesomeIcons.artstation,
+                      Text(
+                        "Jhonatan Sabayé",
+                        style: TextStyle(
+                          fontSize: sizing.isMobile ? 20 : 45,
                           color: Colors.white,
-                          size: 18,
                         ),
+                        textAlign: TextAlign.start,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(2),
-                        child: TextLink(
-                          text: "Artstation",
-                          url: "https://www.artstation.com/sabowsla",
-                          toolTip: "artstation.com/sabowsla",
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          left: 8,
-                          bottom: 2,
-                          top: 2,
-                          right: 2,
-                        ),
-                        child: Icon(
-                          FontAwesomeIcons.github,
-                          color: Colors.white,
-                          size: 18,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(2),
-                        child: TextLink(
-                          text: "Github",
-                          url: "https://github.com/sabowslau",
-                          toolTip: "github.com/sabowslau",
-                        ),
-                      ),
-                      IconTextLink(
-                        icon: Icons.mail,
-                        text: "Correo",
-                        toolpTip: "jsabaye776@unab.edu.co",
-                        url: "",
-                        onTap: () async {
-                          final Uri _emailLaunchUri = Uri(
-                              scheme: 'mailto',
-                              path: 'jsabaye776@unab.edu.co',
-                              queryParameters: {
-                                'subject': 'Proceso⠀de⠀Contratacion',
-                                'body':
-                                    'Hola⠀Jhonatan,⠀Estuvimos⠀viendo⠀tu⠀hoja⠀de⠀vida⠀y⠀nos⠀encantaria⠀tenerte⠀en⠀nuestro⠀equipo⠀de⠀trabajo...'
-                              });
-
-                          launch(_emailLaunchUri.toString());
-                        },
+                      Row(
+                        children: [
+                          ...topLinks
+                              .map((e) => TextLink(
+                                    icon: e.icon,
+                                    text: e.text,
+                                    toolTip: e.toolTip,
+                                    url: e.launchURL,
+                                    onTap: e.onTap,
+                                  ))
+                              .toList(),
+                        ],
                       )
                     ],
-                  )
-                ],
+                  ),
+                ))
+              ],
+            ),
+            if (aboutMe != null)
+              Padding(
+                padding: const EdgeInsets.only(top: 12),
+                child: Text(
+                  aboutMe,
+                  style: TextStyle(
+                    fontSize: sizing.isMobile ? 15 : 20,
+                    color: Colors.white,
+                  ),
+                  textAlign: TextAlign.start,
+                ),
               ),
-            ))
           ],
         ),
       ),
